@@ -12,7 +12,15 @@ $(function () {
 
 
   var saveBtnEl = $(".saveBtn")
+  
+  saveBtnEl.on("click", function() {
 
+    var time = $(this).parent().attr("id");
+    var task = $(this).siblings(".description").val();
+
+    localStorage.setItem(time, task)
+
+  })
 
 
 
@@ -33,7 +41,7 @@ $(function () {
     
     $(".time-block").each(function() {
       
-      var timeBlockHour = parseInt($(this).attr("id"));
+      var timeBlockHour = parseInt($(this).attr("id").split("hour-")[1]);
 
       console.log(this);
 
@@ -55,5 +63,16 @@ $(function () {
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
+
+ $("#text-9").val(localStorage.getItem("hour-9"))
+ $("#text-10").val(localStorage.getItem("hour-10"))
+ $("#text-11").val(localStorage.getItem("hour-11"))
+ $("#text-12").val(localStorage.getItem("hour-12"))
+ $("#text-13").val(localStorage.getItem("hour-13"))
+ $("#text-14").val(localStorage.getItem("hour-14"))
+ $("#text-15").val(localStorage.getItem("hour-15"))
+ $("#text-16").val(localStorage.getItem("hour-16"))
+ $("#text-17").val(localStorage.getItem("hour-17"))
+
   // TODO: Add code to display the current date in the header of the page.
 });
