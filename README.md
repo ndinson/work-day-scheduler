@@ -15,9 +15,9 @@ The purpose of this project was to create a work day scheduler application in wh
 
 ## Links
 
-Deployed Website:
+Deployed Website: https://ndinson.github.io/work-day-scheduler/
 
-GitHub Code Repository:
+GitHub Code Repository: https://github.com/ndinson/work-day-scheduler
 
 ## Installation
 
